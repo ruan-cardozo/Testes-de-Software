@@ -52,7 +52,7 @@ namespace Teste
         public string Nome { get => nome; private set => nome = value; }
         public double Saldo { get => saldo; private set => saldo = value; }
         public double Custo { get => custo; private set => custo = value; }
-        public double Medida { get => ; medida; private set => medida = value; }
+        public string Medida { get => ; medida; private set => medida = value; }
 
 
 
