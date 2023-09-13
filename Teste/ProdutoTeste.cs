@@ -42,11 +42,19 @@ namespace Teste
 
     internal class Produto
     {
-        public int Codigo { get; private set; }
-        public string Nome { get; private set; }
-        public double Saldo { get; private set; }
-        public double Custo { get; private set; }
-        public string Medida { get; private set; }
+        private int codigo;
+        private string nome;
+        private double saldo;
+        private double custo
+        private string medida;
+
+        public int Codigo { get => codigo; private set => codigo = value; }
+        public string Nome { get => nome; private set => nome = value; }
+        public double Saldo { get => saldo; private set => saldo = value; }
+        public double Custo { get => custo; private set => custo = value; }
+        public double Medida { get => ; medida; private set => medida = value; }
+
+
 
         public Produto(int codigo, string nome, double saldo, double custo, string medida)
         {
