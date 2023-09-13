@@ -20,9 +20,33 @@ namespace Teste
     public class ProdutoTeste
     {
         [Fact]
-        public void Test1()
+        public void criarObjeto()
         {
-            
+            //Arrange - prepara as variaveis
+            int codigo = 1;
+            string nome = "Caneca";
+            double saldo = 0;
+            double custo = 0;
+            string medida = "PC";
+
+            //objeto anonimo
+            var obj = new {
+                codigo: 1,
+                nome: "Caneca";,
+                saldo: (double)0,
+                custo: (double)0,
+                medida: "PC"
+            };
+
+            //Act
+            Produto produto = new Produto(codigo, nome, saldo, custo, medida);
+
+            Produto produto = new Produto(obj.codigo, obj.nome, obj.saldo, obj.custo, obj.medida);
+
+
+
+
+            //Assert
         }
     }
 }
