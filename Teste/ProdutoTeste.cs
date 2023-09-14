@@ -2,20 +2,21 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System;
 using Xunit;
+
 namespace Teste
 {
     public class ProdutoTeste
     {
-         /* 
-        Eu, como almoxarife, preciso cadastrar produtos para que sejam consumidos pleos funcionários da empresa
+        /* 
+        Eu, como almoxarife, preciso cadastrar produtos para que sejam consumidos pelos funcionários da empresa
 
-        Critérios de aceite?
-        1 - Um novo produto deve ter obrigatoriamente um código único, nome,
-        saldo 0, custo 0 e unidade de medida
-        2 - As unidades de medida são PC, KG, MT, GR, LT, CX
-        3 - um produto PODE ter uma descrição
-        4 - Um produto PODE ter um código de barras EAN
+        Critérios de aceite:
+        1 - Um novo produto deve ter obrigatoriamente um código único, nome, saldo 0, custo 0 e unidade de medida.
+        2 - As unidades de medida são PC, KG, MT, GR, LT, CX.
+        3 - Um produto PODE ter uma descrição.
+        4 - Um produto PODE ter um código de barras EAN.
         */
 
         [Fact]
@@ -45,24 +46,22 @@ namespace Teste
         private int codigo;
         private string nome;
         private double saldo;
-        private double custo
+        private double custo;
         private string medida;
 
-        public int Codigo { get => codigo; private set => codigo = value; }
-        public string Nome { get => nome; private set => nome = value; }
-        public double Saldo { get => saldo; private set => saldo = value; }
-        public double Custo { get => custo; private set => custo = value; }
-        public string Medida { get => ; medida; private set => medida = value; }
-
-
+        public int Codigo { get => codigo; }
+        public string Nome { get => nome; }
+        public double Saldo { get => saldo; }
+        public double Custo { get => custo; }
+        public string Medida { get => medida; }
 
         public Produto(int codigo, string nome, double saldo, double custo, string medida)
         {
-            Codigo = codigo;
-            Nome = nome;
-            Saldo = saldo;
-            Custo = custo;
-            Medida = medida;
+            this.codigo = codigo;
+            this.nome = nome;
+            this.saldo = saldo;
+            this.custo = custo;
+            this.medida = medida;
         }
     }
 }
